@@ -16,7 +16,8 @@ while True:
 	elif event == 'New Sequence':
 		sequence = Sequence(
 			root=window['-RootNote-'].get().strip(), 
-			num_notes = window['-SequenceLength-'].get())
+			num_notes = window['-SequenceLength-'].get(),
+			note_duration = window['-NoteDuration-'].get())
 		sequence.play()
 
 		# TODO: hide -SolutionImage- ?

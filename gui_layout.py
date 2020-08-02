@@ -29,6 +29,8 @@ def get_layout():
 			,sg.Combo([' C',' C#',' D',' D#',' E',' F',' F#',' G',' G#',' A',' A#',' B'],default_value=' C', key='-RootNote-')],
 		[sg.Text('Sequence Length:')
 			,sg.Combo([2,3,4,5,6,7,8],default_value=2,key='-SequenceLength-')],	
+		[sg.Text('Note Duration:')
+			,sg.Combo([.25,.5,1,2,4],default_value=4,key='-NoteDuration-')],
 	]
 
 	layout = [

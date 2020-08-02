@@ -3,9 +3,10 @@ import random
 import pygame
 
 class Sequence:
-	def __init__(self,root='C', num_notes = 2):
+	def __init__(self,root='C', num_notes = 2, note_duration = 4):
 		self.root = root
 		self.num_notes = num_notes
+		self.note_duration = note_duration
 		self.sequence = self.generate()
 		self.sequence_path = self.save()
 
@@ -14,14 +15,12 @@ class Sequence:
 		scale_pitches = scale.MajorScale(self.root).pitches
 		
 		root_pitch = scale_pitches[0]
-		root_note = note.Note(root_pitch)
-		root_note.duration.type = 'whole'
+		root_note = note.Note(root_pitch, quarterLength = self.note_duration)
 
 		next_notes = []
 		for _ in range(self.num_notes - 1):
 			random_pitch = random.choice(scale_pitches)
-			new_note = note.Note(random_pitch)
-			new_note.duration.type = 'whole'
+			new_note = note.Note(random_pitch, quarterLength = self.note_duration)
 			next_notes.append(new_note)
 		
 		sequence = stream.Stream()
