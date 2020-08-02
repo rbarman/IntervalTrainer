@@ -14,7 +14,7 @@ while True:
 		break
 
 	elif event == 'New Sequence':
-		window['-SOLUTION_TEXT-'].update(value='						')
+		# TODO: hide -SolutionImage- ?
 		sequence = Sequence(
 			root=window['-RootNote-'].get().strip(), 
 			num_notes = window['-SequenceLength-'].get())
@@ -22,7 +22,7 @@ while True:
 
 	elif event == 'Solution':
 		if sequence is not None:
-			window['-SOLUTION_TEXT-'].update(value=sequence.get_text())
+			window['-SolutionImage-'].update(filename=sequence.get_png())
 		
 	elif event == 'Replay Sequence':
 		if sequence is not None:

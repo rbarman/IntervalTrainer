@@ -41,6 +41,10 @@ class Sequence:
 			# check if playback has finished
 			pass
 
+	def get_png(self):
+		fp = self.sequence.write('lily.png')
+		return fp
+
 	def get_text(self):
 		names = [note.name for note in self.sequence.notes]
 		return ' '.join(names)
