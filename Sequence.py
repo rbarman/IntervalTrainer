@@ -30,7 +30,7 @@ class Sequence:
 		return sequence
 
 	def save(self):
-		fp = self.sequence.write('midi',fp='temp.midi')
+		fp = self.sequence.write('midi')
 		return fp
 
 	def play(self):

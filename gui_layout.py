@@ -14,7 +14,7 @@ One Tab for settings
 '''
 
 # TODO: initial fixed layout?
-	# -SolutionImage- can take on variable widths based on sequence length
+	# -SolutionImage- can take on variable widths based on -SequenceLength-
 def get_layout():
 
 	train_tab = [
