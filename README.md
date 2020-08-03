@@ -10,7 +10,7 @@ Next major TODOs:
 
 ---
 
-Version 1:
+[Version 1](https://github.com/rbarman/IntervalTrainer/releases/tag/v1)
 
 User can select major scale, sequence length, and duration of each note. 
 
